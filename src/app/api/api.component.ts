@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 import { MenuItem } from 'primeng/api';
 import { DataService } from '../Services/data.service';
 import { User } from '../user.model';
@@ -15,7 +16,15 @@ public users: User[] = [];
 items: MenuItem[] =[];
 public selectedUser: any;
 public newUser: any;
-  constructor(private dataService: DataService) { }
+
+cancelAddUserMessage() {
+  this.toastrService.success("Ban da Cencel thanh cong", "Success");
+}
+saveAddUserMessage() {
+  this.toastrService.success("Ban da Save thanh cong", "Success");
+}
+
+  constructor(private dataService: DataService, private toastrService: ToastrService) { }
   public editUser(user: any) {
     this.selectedUser = user;
   }
@@ -61,14 +70,31 @@ public addUser(): void{
     id: 0,
     firstName: '',
     lastName: '',
-    email: '',
-    mobile: '',
-    salary: '',
+    email: 'otjsjjghg@gmail.com',
+    mobile: '343434343',
+    salary: '43434343400',
   }
 }
 public cancelAddUser(): void {
   this.newUser = undefined;
+  this.cancelAddUserMessage()
 }
-
+public saveUser(): void {
+  // this.messageService.add({
+  //   severity:'success', 
+  //   summary:'Service Message', 
+  // //   detail:'Via MessageService'
+  // });
+  console.log ('save Note', this.newUser);
+  if (!this.newUser){
+    return;
+  }
+  this.dataService.postComments(this.newUser).subscribe((user)=>{
+    console.log('result', user);
+    this.users?.push(user);
+    this.newUser = undefined;
+    this.saveAddUserMessage()
+  })
+}
 
 }

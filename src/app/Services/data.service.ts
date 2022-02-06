@@ -18,7 +18,7 @@ export class DataService {
     return this.httpClient.get<any>(REST_API + '/Users')
   }
   postComments(payload: any): Observable<any> {
-    return this.httpClient.post<any>(payload, REST_API + '/Users')
-  }
+    return this.httpClient.post<any>(REST_API + '/Users',payload)
+  } 
 }
     

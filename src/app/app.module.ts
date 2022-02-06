@@ -12,7 +12,8 @@ import {SplitterModule} from 'primeng/splitter';
 import {CardModule} from 'primeng/card';
 import {InputTextareaModule} from 'primeng/inputtextarea';
 import { FormsModule } from '@angular/forms';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,8 @@ import { FormsModule } from '@angular/forms';
     MenubarModule,
     InputTextareaModule,
     FormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
 
   ],
   providers: [],
