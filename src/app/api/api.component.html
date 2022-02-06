@@ -1,0 +1,125 @@
+<p>api works!</p>
+<!-- <span>{{users | json}}</span> -->
+
+<button pButton type="button" label="Click" ></button>
+<p-button label="Click" ></p-button>
+
+<br />
+<p-menubar [model]="items"></p-menubar>
+<br />
+<div class="card">
+    <h5>Horizontal</h5>
+    <p-card header="WEB NOTE USER DAU TIEN">
+        <button pButton pRipple type="button" 
+        icon="pi pi-plus" class="p-button-rounded"
+        (click)="addUser()"
+        ></button>
+       <p-splitter [style]="{'height': '300px'}" [panelSizes]="[30,70]" [minSizes]="[10,0]" styleClass="mb-5">
+        <ng-template pTemplate>
+            <div class="col flex align-items-center justify-content-center">
+                <li *ngIf="newUser" style="cursor: pointer">
+                  {{newUser.firstName}}
+                  <br />
+                  <span style="font-style: italic; margin-left: 25px">
+                    {{newUser.lastName.toString().substring(0,10)}}
+                    </span>
+                </li>
+               <li 
+               *ngFor= "let user of users " 
+               style = "cursor: pointer"
+               (click)="editUser(user)"
+               [ngClass]="getSelectedClass(user)"
+               >
+                   {{user.firstName}}
+                   <br />
+                   <span style="font-style: italic; margin-left: 25px">
+                   {{user.lastName.toString().substring(0,10)}}
+                   </span>
+               </li>
+              
+            </div>
+        </ng-template>
+        <ng-template pTemplate>
+            <div *ngIf="newUser" style = "width: 100%;">
+               <span class="p-float-label">
+                <textarea id="float-input" 
+                 rows="1" cols="30" 
+                 pInputTextarea
+                 style="width:100%"
+                 [(ngModel)]="newUser.firstName"
+                ></textarea>
+                 <label for="float-input">First Name</label>
+                </span>
+                <br />
+                 <span class="p-float-label">
+                <textarea id="float-input" 
+                 rows="5" cols="30" 
+                 pInputTextarea
+                 style="width:100%"
+                 [(ngModel)]="newUser.lastName"
+                ></textarea>
+                 <label for="float-input">Last Name</label>
+                </span>
+                <!-- CANCEL AND SAVE -->
+                <p-button label="Save" icon="pi pi-check"></p-button>
+                <p-button label="Cancel" icon="pi pi-times" 
+                   styleClass="p-button-secondary" 
+                   [style]="{'margin-left': '.5em'}"
+                   (click)="cancelAddUser()"
+                >
+                </p-button>
+            </div>
+            <div class="col flex align-items-center justify-content-center"
+             *ngIf="selectedUser && !newUser">
+                <span style="font-weight: bold">{{selectedUser?.firstName}}</span> 
+                <br />
+                <br />
+                <span style = "padding-left:20px" >{{selectedUser?.lastName}} </span>
+            </div>
+            
+        </ng-template>
+    </p-splitter>
+    </p-card>
+    
+</div>
+<br />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br />
+<br />
+<span *ngIf="users!">{{users[0] | json}}</span>
+
+<table id="customer" style="border-collapse: collapse;" >
+    <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Mobile</th>
+        <th>Salary</th>
+        
+    </tr>
+    <tr *ngFor= "let user of users">
+        <td>{{user.id}}</td>
+        <td>{{user.firstName}}</td>
+        <td>{{user.lastName}}</td>  
+        <td>{{user.email}}</td>
+        <td>{{user.mobile}}</td>
+        <td>{{user.salary}}</td>
+    </tr>
+
+</table>
