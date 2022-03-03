@@ -14,11 +14,13 @@ import {InputTextareaModule} from 'primeng/inputtextarea';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
-
+import {ScrollPanelModule} from 'primeng/scrollpanel';
+import { LoginComponent } from './login/login.component';
 @NgModule({
   declarations: [
     AppComponent,
-    ApiComponent
+    ApiComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -32,6 +34,7 @@ import { ToastrModule } from 'ngx-toastr';
     FormsModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
+    ScrollPanelModule,
 
   ],
   providers: [],
