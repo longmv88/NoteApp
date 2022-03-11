@@ -1,0 +1,38 @@
+
+<div class = "container">
+    <div class = "row">
+        <div class = "col-md-6">
+            <div class = "card">
+                <div class = "text-center">
+                    <h1>Dang Ky</h1>
+                    <h6>Dang ky ten ban o day</h6>
+                </div>
+                <form>
+                    <form [formGroup]= "signupForm" (ngSubmit)= "signUp()">
+                         <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Full name</label>
+                            <input formControlName="fullname" type="text" class="form-control" id="exampleInputEmail1" placeholder="your email here" aria-describedby="emailhelp">
+                            
+                        </div>
+                         <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Mobile number</label>
+                            <input formControlName="mobile" type="number" class="form-control" id="exampleInputEmail1" placeholder="your email here" aria-describedby="emailhelp">
+                            
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" placeholder="your email here" aria-describedby="emailhelp">
+                            <div id = "emailhelp" class="form-text">Don't forget to enter your email password :D</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="your pass here">
+                        </div>
+                         <button type="submit" class="btn btn-primary">Sign Up</button>
+                    </form>
+                </form>
+                <a style="color:aliceblue; margin-top: 10px;" routerLink="/login2"> Already Register? Click here to login!</a>
+            </div>
+        </div>
+    </div>
+</div>

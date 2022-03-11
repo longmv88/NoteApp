@@ -16,11 +16,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import {ScrollPanelModule} from 'primeng/scrollpanel';
 import { LoginComponent } from './login/login.component';
+import { Login2Component } from './login2/login2.component';
+import { SignupComponent } from './signup/signup.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { Login3Component } from './login3/login3.component';
 @NgModule({
   declarations: [
     AppComponent,
     ApiComponent,
-    LoginComponent
+    LoginComponent,
+    Login2Component,
+    SignupComponent,
+    Login3Component
   ],
   imports: [
     BrowserModule,
@@ -35,6 +42,7 @@ import { LoginComponent } from './login/login.component';
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
     ScrollPanelModule,
+    ReactiveFormsModule,
 
   ],
   providers: [],

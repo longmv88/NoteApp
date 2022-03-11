@@ -50,91 +50,43 @@
     },
     {
       "id": 7,
-      "firstName": "clong",
-      "lastName": "longsfsfs",
+      "firstName": "",
+      "lastName": "",
       "email": "otjsjjghg@gmail.com",
       "mobile": "343434343",
       "salary": "43434343400"
     },
     {
       "id": 8,
-      "firstName": "dada",
-      "lastName": "adaa",
+      "firstName": "",
+      "lastName": "",
       "email": "otjsjjghg@gmail.com",
       "mobile": "343434343",
       "salary": "43434343400"
     },
     {
       "id": 9,
-      "firstName": "dadd",
-      "lastName": "dadada",
+      "firstName": "",
+      "lastName": "",
       "email": "otjsjjghg@gmail.com",
       "mobile": "343434343",
       "salary": "43434343400"
+    }
+  ],
+  "signupUsers": [
+    {
+      "id": 1,
+      "fullName": "longmv",
+      "mobile": "0368442662",
+      "email": "longmv88@gmail.com",
+      "password": "25000"
     },
     {
-      "id": 10,
-      "firstName": "đâ",
-      "lastName": "adada",
-      "email": "otjsjjghg@gmail.com",
-      "mobile": "343434343",
-      "salary": "43434343400"
-    },
-    {
-      "id": 11,
-      "firstName": "dâda",
-      "lastName": "dâdada",
-      "email": "otjsjjghg@gmail.com",
-      "mobile": "343434343",
-      "salary": "43434343400"
-    },
-    {
-      "id": 12,
-      "firstName": "đâ",
-      "lastName": "dâda",
-      "email": "otjsjjghg@gmail.com",
-      "mobile": "343434343",
-      "salary": "43434343400"
-    },
-    {
-      "id": 13,
-      "firstName": "dfsdfsfs",
-      "lastName": "sfsss",
-      "email": "otjsjjghg@gmail.com",
-      "mobile": "343434343",
-      "salary": "43434343400"
-    },
-    {
-      "id": 14,
-      "firstName": "8",
-      "lastName": "8",
-      "email": "otjsjjghg@gmail.com",
-      "mobile": "343434343",
-      "salary": "43434343400"
-    },
-    {
-      "id": 15,
-      "firstName": "đa",
-      "lastName": "đâ",
-      "email": "otjsjjghg@gmail.com",
-      "mobile": "343434343",
-      "salary": "43434343400"
-    },
-    {
-      "id": 16,
-      "firstName": "55",
-      "lastName": "55555",
-      "email": "otjsjjghg@gmail.com",
-      "mobile": "343434343",
-      "salary": "43434343400"
-    },
-    {
-      "id": 17,
-      "firstName": "44",
-      "lastName": "555",
-      "email": "otjsjjghg@gmail.com",
-      "mobile": "343434343",
-      "salary": "43434343400"
+      "fullname": "ooi",
+      "email": "lojhk@gmail.com",
+      "password": "99999",
+      "mobile": 667,
+      "id": 2
     }
   ]
 }
